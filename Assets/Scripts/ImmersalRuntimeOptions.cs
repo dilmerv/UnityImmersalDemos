@@ -7,7 +7,12 @@ public class ImmersalRuntimeOptions : MonoBehaviour
     [SerializeField] private TextMeshProUGUI pointCloudVisualizerText;
     
     private bool areVisualizersActive = true;
-    
+
+    private void Start()
+    {
+        ToggleVisualizations(); // set them to false by default
+    }
+
     public void ToggleVisualizations()
     {
         areVisualizersActive = !areVisualizersActive;
